@@ -1,0 +1,48 @@
+version: "3.1"
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    container_name: badge_wp2
+    working_dir: /var/www/html
+    ports:
+      - "9005:80"
+    volumes:
+      - .:/var/www/html
+      - ./docker/nginx_log:/var/log/nginx
+      - ./docker/php-fpm/php-fpm.log:/var/log/php-fpm.log
+      - ./docker/config/app.conf:/etc/nginx/conf.d/app.conf
+    links:
+      - mysql
+  mysql:
+    image: mysql:5.6
+    container_name: badge_sql1
+    ports:
+      - "9006:3306"
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: root
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: badge_phpmyadmin
+    depends_on:
+      - mysql
+    ports:
+      - "9007:80"
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: password
+  redis:
+    image: redis:3-alpine
+    container_name: badge_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - "./docker/redis:/usr/local/etc/redis"
+    command: redis-server --appendonly yes
+

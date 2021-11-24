@@ -1,0 +1,6 @@
+/docker/mysql/auto.cnf
+/docker/mysql/ib_logfile0
+/docker/mysql/ib_logfile1
+/docker/mysql/ibdata1
+/docker/nginx_log/access.log
+/docker/nginx_log/error.log
