@@ -1,181 +1,34 @@
-[22-Nov-2021 09:20:39 UTC] PHP Fatal error:  Uncaught RedisException: Connection refused in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Shared/Redis/TraitPHPRedis.php:22
+[06-Dec-2021 02:16:29 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/wp-content/plugins/ecommerce-base/src/Plans/Controllers/PlanRegistration.php on line 24
+[06-Dec-2021 02:18:29 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/cmb2/includes/CMB2.php on line 1544
+[06-Dec-2021 02:18:31 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/cmb2/includes/CMB2.php on line 1544
+[06-Dec-2021 02:19:03 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/cmb2/includes/CMB2.php on line 1544
+[06-Dec-2021 02:19:08 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/cmb2/includes/CMB2.php on line 1544
+[06-Dec-2021 02:19:09 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/cmb2/includes/CMB2.php on line 1544
+[06-Dec-2021 02:19:10 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/cmb2/includes/CMB2.php on line 1544
+[06-Dec-2021 02:19:10 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/cmb2/includes/CMB2.php on line 439
+[06-Dec-2021 02:19:10 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/cmb2/includes/CMB2.php on line 446
+[06-Dec-2021 02:19:10 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/cmb2/includes/CMB2_Field.php on line 1366
+[06-Dec-2021 06:38:47 UTC] PHP Fatal error:  Uncaught TypeError: Return value of EBase\Plans\Models\PlanModel::getPlanIDs() must be of the type array, string returned in /var/www/html/wp-content/plugins/ecommerce-base/src/Plans/Models/PlanModel.php:63
 Stack trace:
-#0 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Shared/Redis/TraitPHPRedis.php(22): Redis->connect()
-#1 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Controllers/ProductController.php(37): MyShopKitMB\Product\Controllers\ProductController->test()
-#2 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Product.php(2): MyShopKitMB\Product\Controllers\ProductController->__construct()
-#3 /var/www/html/wp-content/plugins/myshopkit-magic-badges/myshopkit-magic-badges.php(22): require_once('/var/www/html/w...')
-#4 /var/www/html/wp-settings.php(409): include_once('/var/www/html/w...')
-#5 /var/www/html/wp-config.php(103): require_once('/var/www/html/w...')
-#6 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
-#7 /var/www/html/wp-admin/admin.php(34): require_once('/var/www/html/w...')
-#8 /var/www/html/ in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Shared/Redis/TraitPHPRedis.php on line 22
-[22-Nov-2021 09:20:39 UTC] PHP Notice:  is_embed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /var/www/html/wp-includes/functions.php on line 5535
-[22-Nov-2021 09:20:39 UTC] PHP Notice:  is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /var/www/html/wp-includes/functions.php on line 5535
-[22-Nov-2021 09:21:16 UTC] PHP Fatal error:  Uncaught RedisException: Connection refused in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Shared/Redis/TraitPHPRedis.php:19
+#0 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Plans/Controllers/PlanController.php(18): EBase\Plans\Models\PlanModel::getPlanIDs()
+#1 /var/www/html/wp-includes/class-wp-hook.php(303): MyShopKitMB\Plans\Controllers\PlanController->getPlans()
+#2 /var/www/html/wp-includes/plugin.php(189): WP_Hook->apply_filters()
+#3 /var/www/html/wp-content/plugins/ecommerce-base/src/Plans/Controllers/PlanController.php(35): apply_filters()
+#4 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1140): EBase\Plans\Controllers\PlanController->getPlans()
+#5 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(987): WP_REST_Server->respond_to_request()
+#6 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch()
+#7 /var/www/html/wp-includes/rest-api.p in /var/www/html/wp-content/plugins/ecommerce-base/src/Plans/Models/PlanModel.php on line 63
+[06-Dec-2021 08:58:51 UTC] PHP Warning:  array_keys() expects parameter 1 to be array, bool given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Plans/Controllers/PlanController.php on line 29
+[06-Dec-2021 08:58:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Plans/Controllers/PlanController.php on line 29
+[06-Dec-2021 08:59:27 UTC] PHP Warning:  array_keys() expects parameter 1 to be array, bool given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Plans/Controllers/PlanController.php on line 29
+[06-Dec-2021 08:59:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Plans/Controllers/PlanController.php on line 29
+[06-Dec-2021 09:21:17 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function MyShopKitMB\Plans\Controllers\PlanController::getMePlan(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 305 and exactly 2 expected in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Plans/Controllers/PlanController.php:53
 Stack trace:
-#0 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Shared/Redis/TraitPHPRedis.php(19): Redis->connect()
-#1 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Controllers/ProductController.php(37): MyShopKitMB\Product\Controllers\ProductController->test()
-#2 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Product.php(2): MyShopKitMB\Product\Controllers\ProductController->__construct()
-#3 /var/www/html/wp-content/plugins/myshopkit-magic-badges/myshopkit-magic-badges.php(22): require_once('/var/www/html/w...')
-#4 /var/www/html/wp-settings.php(409): include_once('/var/www/html/w...')
-#5 /var/www/html/wp-config.php(103): require_once('/var/www/html/w...')
-#6 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
-#7 /var/www/html/wp-admin/admin.php(34): require_once('/var/www/html/w...')
-#8 /var/www/html/ in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Shared/Redis/TraitPHPRedis.php on line 19
-[22-Nov-2021 09:21:16 UTC] PHP Notice:  is_embed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /var/www/html/wp-includes/functions.php on line 5535
-[22-Nov-2021 09:21:16 UTC] PHP Notice:  is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /var/www/html/wp-includes/functions.php on line 5535
-[22-Nov-2021 09:21:28 UTC] PHP Fatal error:  Uncaught RedisException: Connection refused in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Shared/Redis/TraitPHPRedis.php:19
-Stack trace:
-#0 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Shared/Redis/TraitPHPRedis.php(19): Redis->connect()
-#1 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Controllers/ProductController.php(37): MyShopKitMB\Product\Controllers\ProductController->test()
-#2 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Product.php(2): MyShopKitMB\Product\Controllers\ProductController->__construct()
-#3 /var/www/html/wp-content/plugins/myshopkit-magic-badges/myshopkit-magic-badges.php(22): require_once('/var/www/html/w...')
-#4 /var/www/html/wp-settings.php(409): include_once('/var/www/html/w...')
-#5 /var/www/html/wp-config.php(103): require_once('/var/www/html/w...')
-#6 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
-#7 /var/www/html/wp-admin/admin.php(34): require_once('/var/www/html/w...')
-#8 /var/www/html/ in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Shared/Redis/TraitPHPRedis.php on line 19
-[22-Nov-2021 09:21:28 UTC] PHP Notice:  is_embed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /var/www/html/wp-includes/functions.php on line 5535
-[22-Nov-2021 09:21:28 UTC] PHP Notice:  is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /var/www/html/wp-includes/functions.php on line 5535
-[22-Nov-2021 11:42:54 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /var/www/html/wp-content/plugins/myshopkit-magic-badges/myshopkit-magic-badges.php on line 25
-[22-Nov-2021 11:42:54 UTC] PHP Notice:  is_embed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /var/www/html/wp-includes/functions.php on line 5535
-[22-Nov-2021 11:42:54 UTC] PHP Notice:  is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /var/www/html/wp-includes/functions.php on line 5535
-[23-Nov-2021 08:03:39 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 49
-[23-Nov-2021 08:03:39 UTC] PHP Fatal error:  Uncaught TypeError: Return value of MyShopKitMB\Redis\Controllers\RedisController::handleManualBadgesRedis() must be of the type array, null returned in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php:51
-Stack trace:
-#0 /var/www/html/wp-includes/class-wp-hook.php(303): MyShopKitMB\Redis\Controllers\RedisController->handleManualBadgesRedis()
+#0 /var/www/html/wp-includes/class-wp-hook.php(305): MyShopKitMB\Plans\Controllers\PlanController->getMePlan()
 #1 /var/www/html/wp-includes/plugin.php(189): WP_Hook->apply_filters()
-#2 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Controllers/ProductController.php(129): apply_filters()
-#3 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1140): MyShopKitMB\Product\Controllers\ProductController->getProducts()
+#2 /var/www/html/wp-content/plugins/ecommerce-base/src/Plans/Controllers/PlanController.php(68): apply_filters()
+#3 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1140): EBase\Plans\Controllers\PlanController->getMePlan()
 #4 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(987): WP_REST_Server->respond_to_request()
 #5 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch()
 #6 /var/www/html/wp-includes/rest-api.php(370): WP_REST_Server->serve_request()
-#7 /var/www/html in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 51
-[23-Nov-2021 08:04:56 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 49
-[23-Nov-2021 08:04:56 UTC] PHP Fatal error:  Uncaught TypeError: Return value of MyShopKitMB\Redis\Controllers\RedisController::handleManualBadgesRedis() must be of the type array, null returned in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php:51
-Stack trace:
-#0 /var/www/html/wp-includes/class-wp-hook.php(303): MyShopKitMB\Redis\Controllers\RedisController->handleManualBadgesRedis()
-#1 /var/www/html/wp-includes/plugin.php(189): WP_Hook->apply_filters()
-#2 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Controllers/ProductController.php(129): apply_filters()
-#3 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1140): MyShopKitMB\Product\Controllers\ProductController->getProducts()
-#4 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(987): WP_REST_Server->respond_to_request()
-#5 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch()
-#6 /var/www/html/wp-includes/rest-api.php(370): WP_REST_Server->serve_request()
-#7 /var/www/html in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 51
-[23-Nov-2021 08:04:58 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 49
-[23-Nov-2021 08:04:58 UTC] PHP Fatal error:  Uncaught TypeError: Return value of MyShopKitMB\Redis\Controllers\RedisController::handleManualBadgesRedis() must be of the type array, null returned in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php:51
-Stack trace:
-#0 /var/www/html/wp-includes/class-wp-hook.php(303): MyShopKitMB\Redis\Controllers\RedisController->handleManualBadgesRedis()
-#1 /var/www/html/wp-includes/plugin.php(189): WP_Hook->apply_filters()
-#2 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Controllers/ProductController.php(129): apply_filters()
-#3 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1140): MyShopKitMB\Product\Controllers\ProductController->getProducts()
-#4 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(987): WP_REST_Server->respond_to_request()
-#5 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch()
-#6 /var/www/html/wp-includes/rest-api.php(370): WP_REST_Server->serve_request()
-#7 /var/www/html in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 51
-[23-Nov-2021 08:05:02 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 49
-[23-Nov-2021 08:05:02 UTC] PHP Fatal error:  Uncaught TypeError: Return value of MyShopKitMB\Redis\Controllers\RedisController::handleManualBadgesRedis() must be of the type array, null returned in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php:51
-Stack trace:
-#0 /var/www/html/wp-includes/class-wp-hook.php(303): MyShopKitMB\Redis\Controllers\RedisController->handleManualBadgesRedis()
-#1 /var/www/html/wp-includes/plugin.php(189): WP_Hook->apply_filters()
-#2 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Controllers/ProductController.php(129): apply_filters()
-#3 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1140): MyShopKitMB\Product\Controllers\ProductController->getProducts()
-#4 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(987): WP_REST_Server->respond_to_request()
-#5 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch()
-#6 /var/www/html/wp-includes/rest-api.php(370): WP_REST_Server->serve_request()
-#7 /var/www/html in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 51
-[23-Nov-2021 08:07:17 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 49
-[23-Nov-2021 08:07:17 UTC] PHP Fatal error:  Uncaught TypeError: Return value of MyShopKitMB\Redis\Controllers\RedisController::handleManualBadgesRedis() must be of the type array, null returned in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php:51
-Stack trace:
-#0 /var/www/html/wp-includes/class-wp-hook.php(303): MyShopKitMB\Redis\Controllers\RedisController->handleManualBadgesRedis()
-#1 /var/www/html/wp-includes/plugin.php(189): WP_Hook->apply_filters()
-#2 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Controllers/ProductController.php(129): apply_filters()
-#3 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1140): MyShopKitMB\Product\Controllers\ProductController->getProducts()
-#4 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(987): WP_REST_Server->respond_to_request()
-#5 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch()
-#6 /var/www/html/wp-includes/rest-api.php(370): WP_REST_Server->serve_request()
-#7 /var/www/html in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 51
-[23-Nov-2021 08:10:44 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 61
-[23-Nov-2021 08:10:44 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to MyShopKitMB\Automatic\Controllers\AutomaticBadgeController::handleDetectBadge() must be of the type array, null given, called in /var/www/html/wp-includes/class-wp-hook.php on line 303 and defined in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Automatic/Controllers/AutomaticBadgeController.php:342
-Stack trace:
-#0 /var/www/html/wp-includes/class-wp-hook.php(303): MyShopKitMB\Automatic\Controllers\AutomaticBadgeController->handleDetectBadge()
-#1 /var/www/html/wp-includes/plugin.php(189): WP_Hook->apply_filters()
-#2 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Controllers/ProductController.php(138): apply_filters()
-#3 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1140): MyShopKitMB\Product\Controllers\ProductController->getProducts()
-#4 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(987): WP_REST_Server->respond_to_request()
-#5 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Automatic/Controllers/AutomaticBadgeController.php on line 342
-[23-Nov-2021 08:31:12 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:31:13 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:31:13 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:31:13 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:35:35 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:35:35 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:35:35 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:35:35 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:35:48 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:35:52 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:35:52 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:35:52 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:57:04 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:57:05 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:57:05 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:57:05 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:57:25 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:57:25 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:57:25 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 08:57:25 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:13:15 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:13:16 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:13:16 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:13:16 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:13:29 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:13:29 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:13:29 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:13:29 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:15:15 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:15:16 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:15:16 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:15:16 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Controllers/RedisController.php on line 35
-[23-Nov-2021 09:39:47 UTC] PHP Notice:  Array to string conversion in /var/www/html/wp-content/plugins/myshopkit-magic-badges/vendor/predis/predis/src/Connection/StreamConnection.php on line 390
-[23-Nov-2021 09:39:47 UTC] PHP Notice:  Array to string conversion in /var/www/html/wp-content/plugins/myshopkit-magic-badges/vendor/predis/predis/src/Connection/StreamConnection.php on line 391
-[23-Nov-2021 10:41:48 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property Predis\Response\Status::$payload in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Services/RedisService.php:52
-Stack trace:
-#0 /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Product/Controllers/ProductController.php(117): MyShopKitMB\Redis\Services\RedisService->isRunning()
-#1 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(1140): MyShopKitMB\Product\Controllers\ProductController->getProducts()
-#2 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(987): WP_REST_Server->respond_to_request()
-#3 /var/www/html/wp-includes/rest-api/class-wp-rest-server.php(414): WP_REST_Server->dispatch()
-#4 /var/www/html/wp-includes/rest-api.php(370): WP_REST_Server->serve_request()
-#5 /var/www/html/wp-includes/class-wp-hook.php(303): rest_api_loaded()
-#6 /var/www/html/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters()
-#7 /var/www/html/wp-includes/plugin.php(518): WP_Hook->do_action()
-#8 /var/www/html/wp-includes/class-w in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Services/RedisService.php on line 52
-[23-Nov-2021 10:44:34 UTC] PHP Notice:  Undefined property: Predis\Response\Status::$satus in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Redis/Services/RedisService.php on line 52
-[24-Nov-2021 02:41:37 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-api.php on line 919
-[24-Nov-2021 02:41:37 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 95
-[24-Nov-2021 02:41:37 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 96
-[24-Nov-2021 02:41:37 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 02:41:37 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 02:41:39 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-api.php on line 919
-[24-Nov-2021 02:41:39 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 95
-[24-Nov-2021 02:41:39 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 96
-[24-Nov-2021 02:41:39 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 02:41:39 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 02:41:39 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 95
-[24-Nov-2021 02:41:39 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 96
-[24-Nov-2021 02:41:39 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 02:41:39 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 02:42:41 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-api.php on line 919
-[24-Nov-2021 02:42:41 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 95
-[24-Nov-2021 02:42:41 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 96
-[24-Nov-2021 02:42:41 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 02:42:41 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 02:44:30 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-api.php on line 919
-[24-Nov-2021 02:44:30 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 95
-[24-Nov-2021 02:44:30 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 96
-[24-Nov-2021 02:44:30 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 02:44:30 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 02:44:31 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 95
-[24-Nov-2021 02:44:31 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 96
-[24-Nov-2021 02:44:31 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 02:44:31 UTC] PHP Notice:  Undefined index: type in /var/www/html/wp-content/plugins/redux-framework/redux-core/inc/classes/class-redux-options-defaults.php on line 104
-[24-Nov-2021 08:48:57 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION) or const (T_CONST) in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Automatic/Controllers/AutomaticBadgeController.php on line 29
+ in /var/www/html/wp-content/plugins/myshopkit-magic-badges/src/Plans/Controllers/PlanController.php on line 53
